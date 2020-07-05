@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+   <link
+     href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap"
+     rel="stylesheet"
+   />
+   <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+   />
+   <link rel="stylesheet" href="./assets/css/style.css" />
+   <title>Restaurant Finder</title>
+ </head>
+ 
+ <body class="flex-column min-100-vh">
+   <header class="hero">
+     <h1 class="app-title"></i> Find it</h1>
+     <p>
+       Search for a restaurant by your location latitude (and longitude) for restaurants, rating and how many votes they have!
+     </p>
+   </header>
+ 
+   <main class="flex-row justify-space-between">
+     <div class="col-12 col-md-4">
+       <div class="card">
+         <h3 class="card-header text-uppercase">Search By latitude</h3>
+         <form id="latitude-form" class="card-body">
+           <label class="form-label" for="latitudelocate">latitudelocate</label>
+           <input
+             name="latitudelocate"
+             id="latitudelocate"
+             type="text"
+             autofocus="true"
+             class="form-input"
+             placeholder="Type latitude to locate"
+           />
+           <button type="submit" class="btn">Get latitude</button>
+         </form>
+       </div>
+     </div>
+ 
+     <div class="col-12 col-md-8">
+       <h2 class="subtitle">
+         Showing restaurants for: <span id="restaurant-search-term"></span>
+       </h2>
+       <div id="restaurants-container" class="list-group"></div>
+     </div>
+   </main>
+       <!-- link to jquery -->
+       <script
+       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+       </script>
+       <script src="./assets/js/restaurant.js"></script>
+ </body>
+</html>
+
+
